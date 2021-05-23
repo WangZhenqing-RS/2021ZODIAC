@@ -107,7 +107,7 @@
 
 #### 2.2.3 优化器与学习率调整
 
-我们选择Adamw优化器，初始学习率lr=1e-4，权重衰减weight_decay=1e-3。
+我们选择Adamw优化器，初始学习率lr=1e-3，权重衰减weight_decay=1e-3。
 
 	optimizer = torch.optim.AdamW(model.parameters(),
                                   lr=1e-3, weight_decay=1e-3)
