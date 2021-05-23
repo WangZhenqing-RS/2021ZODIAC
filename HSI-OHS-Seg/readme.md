@@ -14,7 +14,7 @@
 
 #### 2.1.1 统计不同类别的个数
 
-我们先统计一下数据中的不同类别的分布情况(如图1所示)，发现类别严重不均衡，需要添加diceloss以及针对性的数据增强来缓解这种情况。
+我们先统计一下数据中的不同类别的分布情况，发现类别严重不均衡，需要添加diceloss以及针对性的数据增强来缓解这种情况。
 
 ![不同类别的个数](https://github.com/WangZhenqing-RS/2021ZODIAC/blob/main/HSI-OHS-Seg/plt/%E5%9C%B0%E7%89%A9%E8%A6%81%E7%B4%A0%E7%B1%BB%E5%88%AB%E5%83%8F%E7%B4%A0%E6%95%B0%E7%9B%AE%E5%9B%BE.png  "不同类别的个数")
 
@@ -105,7 +105,7 @@
     loss_fn = L.JointLoss(first=DiceLoss_fn, second=SoftCrossEntropy_fn,
                           first_weight=0.5, second_weight=0.5).cuda()
 
-#### 2.2.1 优化器与学习率调整
+#### 2.2.3 优化器与学习率调整
 
 我们选择Adamw优化器，初始学习率lr=1e-4，权重衰减weight_decay=1e-3。
 
